@@ -1,0 +1,27 @@
+# Lab 1: Basic Small Business Network
+
+## Objective
+Build a simple office network and verify communication between devices.
+
+## Devices Used
+- 1 Router
+- 1 Switch
+- 4 PCs
+- 1 Server
+
+## IP Scheme
+- 192.168.10.0/24
+
+## What I Configured
+- Router LAN interface
+- IP addresses on all hosts
+- Default gateway on all end devices
+
+## Verification
+- Successful pings between hosts
+- Successful ping to router
+
+## What I Learned
+- How end devices use a default gateway
+- Basic LAN addressing
+- How to test connectivity
