@@ -1,0 +1,54 @@
+# Lab: VLAN Configuration & Inter-VLAN Routing
+
+## Overview
+
+In this lab, I built a segmented network using VLANs to separate traffic between different departments and implemented inter-VLAN routing to 
+allow controlled communication between them. This project helped reinforce how VLANs improve network organization, security, and efficiency.
+
+## Objectives
+
+* Create and configure multiple VLANs
+* Assign switch ports to specific VLANs
+* Configure trunk links between switches
+* Implement inter-VLAN routing using a multilayer switch
+* Verify connectivity between VLANs
+
+## Network Design
+
+* VLAN 10 – Sales (192.168.10.0/24)
+* VLAN 20 – HR (192.168.20.0/24)
+
+Each VLAN was assigned its own subnet and default gateway using Switch Virtual Interfaces (SVIs).
+
+## Configuration Summary
+
+* Created VLANs on the switch
+* Assigned access ports to VLAN 10 and VLAN 20
+* Configured trunk links to allow multiple VLANs across switches
+* Enabled IP routing on the multilayer switch
+* Configured SVIs:
+
+  * VLAN 10 → 192.168.10.1
+  * VLAN 20 → 192.168.20.1
+
+## Verification
+
+* Devices within the same VLAN successfully communicated
+* Inter-VLAN routing was verified by successful pings between VLAN 10 and VLAN 20
+* Used commands like:
+
+  * `show vlan brief`
+  * `show interfaces trunk`
+  * `show ip interface brief`
+
+## Issues Encountered
+
+* VLAN interfaces initially remained down due to no active ports assigned
+* Fixed by assigning access ports and ensuring devices were connected and powered on
+
+## Key Takeaways
+
+* VLANs segment broadcast domains and improve network organization
+* SVIs act as default gateways for each VLAN
+* Inter-VLAN routing requires both active VLANs and IP routing enabled
+* Troubleshooting requires verifying both Layer 2 and Layer 3 configurations
